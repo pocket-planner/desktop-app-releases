@@ -56,32 +56,38 @@ jobs:
           git clone https://x-access-token:${TAP_TOKEN}@github.com/pocket-planner/homebrew-tap.git homebrew-tap
           mkdir -p homebrew-tap/Casks
 
-          # 6. Generate the Cask formula directly inline
-          cat <<EOF > homebrew-tap/Casks/pocket-planner.rb
-cask "pocket-planner" do
-  version "${VERSION}"
-  sha256 "${SHA256}"
+          # 6. Generate the Cask formula directly inline (keeping indentations and removing them with sed)
+          cat <<'EOF' | sed -e 's/^ \{10\}//' > homebrew-tap/Casks/pocket-planner.rb
+          cask "pocket-planner" do
+            version "__VERSION__"
+            sha256 "__SHA256__"
 
-  url "https://github.com/pocket-planner/desktop-app-releases/releases/download/v#{version}/${URL_FILENAME}"
-  name "Pocket Planner"
-  desc "A minimal desktop app for weekly task planning"
-  homepage "https://github.com/pocket-planner/desktop-app"
+            url "https://github.com/pocket-planner/desktop-app-releases/releases/download/v#{version}/__URL_FILENAME__"
+            name "Pocket Planner"
+            desc "A minimal desktop app for weekly task planning"
+            homepage "https://github.com/pocket-planner/desktop-app"
 
-  app "Pocket Planner.app"
+            app "Pocket Planner.app"
 
-  caveats <<~EOS
-    Because this app is self-signed/unsigned, you may need to clear the quarantine attribute after installation:
-      xattr -cr "/Applications/Pocket Planner.app"
-  EOS
+            caveats <<~EOS
+              Because this app is self-signed/unsigned, you may need to clear the quarantine attribute after installation:
+                xattr -cr "/Applications/Pocket Planner.app"
+            EOS
 
-  zap trash: [
-    "~/Library/Application Support/pocket-planner",
-    "~/Library/Application Support/pocket-planner-dev",
-    "~/Library/Preferences/com.pocketplanner.desktop.plist",
-    "~/Library/Saved Application State/com.pocketplanner.desktop.savedState",
-  ]
-end
-EOF
+            zap trash: [
+              "~/Library/Application Support/pocket-planner",
+              "~/Library/Application Support/pocket-planner-dev",
+              "~/Library/Preferences/com.pocketplanner.desktop.plist",
+              "~/Library/Saved Application State/com.pocketplanner.desktop.savedState",
+            ]
+          end
+          EOF
+
+          # Replace template variables
+          sed -i -e "s/__VERSION__/${VERSION}/g" \
+                 -e "s/__SHA256__/${SHA256}/g" \
+                 -e "s/__URL_FILENAME__/${URL_FILENAME}/g" \
+                 homebrew-tap/Casks/pocket-planner.rb
 
           # 7. Commit and Push to Tap
           cd homebrew-tap
