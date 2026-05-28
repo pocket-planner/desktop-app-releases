@@ -21,7 +21,8 @@ jobs:
           TAG_NAME="${{ github.event.inputs.tag_name || github.event.release.tag_name }}"
           echo "Target Tag: $TAG_NAME"
           mkdir -p dist
-          gh release download "$TAG_NAME" --pattern "*.dmg" --dir dist
+          # Explicitly target the releases repository to run outside a git checkout context
+          gh release download "$TAG_NAME" --repo "pocket-planner/desktop-app-releases" --pattern "*.dmg" --dir dist
 
       - name: Generate and Update Cask
         env:
