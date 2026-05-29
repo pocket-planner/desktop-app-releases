@@ -6,6 +6,24 @@ Designed to keep you focused, Pocket Planner sits in your system tray and helps 
 
 ---
 
+## 📌 Table of Contents
+
+- [🎨 Visual Preview](#visual-preview)
+- [✨ Features](#features)
+  - [Weekly Planning & Drag-and-Drop](#weekly-planning--drag-and-drop)
+  - [Power Workflows](#power-workflows)
+  - [Task Notes & Contextual Actions](#task-notes--contextual-actions)
+  - [Deep OS Integration & Notifications](#deep-os-integration--notifications)
+  - [Personalization](#personalization)
+  - [Privacy-First & Local-Only](#privacy-first--local-only)
+- [📸 Screenshots](#screenshots)
+- [🚀 Download & Installation](#download--installation)
+  - [macOS](#macos)
+  - [Windows](#windows)
+- [🛠️ Data Locations](#data-locations)
+
+---
+
 ## 🎨 Visual Preview
 
 > [!NOTE]
