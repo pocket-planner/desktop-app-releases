@@ -10,21 +10,21 @@ Designed to keep you focused, Pocket Planner sits in your system tray and helps 
 
 - [🎨 Visual Preview](#visual-preview)
 - [✨ Features](#features)
-  - [Weekly Planning & Drag-and-Drop](#weekly-planning--drag-and-drop)
+  - [Weekly Planning & Drag-and-Drop](#weekly-planning-and-drag-and-drop)
   - [Power Workflows](#power-workflows)
-  - [Task Notes & Contextual Actions](#task-notes--contextual-actions)
-  - [Deep OS Integration & Notifications](#deep-os-integration--notifications)
+  - [Task Notes & Contextual Actions](#task-notes-and-contextual-actions)
+  - [Deep OS Integration & Notifications](#deep-os-integration-and-notifications)
   - [Personalization](#personalization)
-  - [Privacy-First & Local-Only](#privacy-first--local-only)
+  - [Privacy-First & Local-Only](#privacy-first-and-local-only)
 - [📸 Screenshots](#screenshots)
-- [🚀 Download & Installation](#download--installation)
+- [🚀 Download & Installation](#download-and-installation)
   - [macOS](#macos)
   - [Windows](#windows)
 - [🛠️ Data Locations](#data-locations)
 
 ---
 
-## 🎨 Visual Preview
+## <a id="visual-preview"></a>🎨 Visual Preview
 
 > [!NOTE]
 > _Screenshots below show Pocket Planner in action._
@@ -34,27 +34,27 @@ _Figure 1: The distraction-free weekly grid featuring task notes, progress track
 
 ---
 
-## ✨ Features
+## <a id="features"></a>✨ Features
 
-### 📅 Weekly Planning & Drag-and-Drop
+### <a id="weekly-planning-and-drag-and-drop"></a>📅 Weekly Planning & Drag-and-Drop
 
 - **Intuitive Grid:** View and manage your entire work week at a glance.
 - **Drag & Drop:** Easily reorder tasks within a day or drag them to reschedule for another day.
 - **Incomplete Task Rollover:** Start every week fresh by carrying forward incomplete tasks from the previous week with a single click.
 
-### ⚡ Power Workflows
+### <a id="power-workflows"></a>⚡ Power Workflows
 
 - **Global Quick Add:** Use a global keyboard shortcut (configurable in settings) to instantly summon the Quick Add panel from anywhere in your OS. Add tasks on the fly without breaking your flow.
 - **Recurring Tasks:** Define templates for daily or weekly tasks (e.g., stand-ups, status reports) and automatically sync them into your weekly schedule.
 - **Deep Search:** Quickly search through all historical weeks, task descriptions, and detailed notes using the built-in search view.
 
-### 📄 Task Notes & Contextual Actions
+### <a id="task-notes-and-contextual-actions"></a>📄 Task Notes & Contextual Actions
 
 - **Rich Task Notes:** Hover over any task to add detailed notes, links, or checklists. Tasks with notes stay highlighted so you never lose context.
 - **Any-Day Summaries:** Instantly generate a formatted text summary for any day to copy-paste into Slack, Teams, or email. Includes a comparison of "Today" vs "Yesterday" tasks.
 - **Recycle Bin:** Accidentally deleted a task? Restore it instantly from the in-app Recycle Bin.
 
-### 🔔 Deep OS Integration & Notifications
+### <a id="deep-os-integration-and-notifications"></a>🔔 Deep OS Integration & Notifications
 
 - **Workday-Aware Reminders:** Notifications respect your personal time and only fire during your configured working hours (e.g., 9:00 AM to 5:00 PM) at your preferred interval (30m, 1h, 2h, 4h).
 - **Adaptive & Dynamic Messaging:** Reminders update based on the time of day (morning check-ins, afternoon focus nudges, evening wrap-ups) and automatically change to celebratory messages once all your tasks are completed.
@@ -65,18 +65,18 @@ _Figure 1: The distraction-free weekly grid featuring task notes, progress track
   - **Windows:** The taskbar icon features a live progress bar reflecting your daily completion rate.
   - **macOS:** The Dock icon displays a red badge count of remaining tasks for the day.
 
-### 🎨 Personalization
+### <a id="personalization"></a>🎨 Personalization
 
 - **26 Built-In Themes:** Find your perfect vibe with dark and light themes including Nord, Dracula, Sunset, Cyberpunk, Forest, and standard system defaults.
 - **Adjustable Typography:** Choose from small, medium, or large font scales to suit your display.
 
-### 🔒 Privacy-First & Local-Only
+### <a id="privacy-first-and-local-only"></a>🔒 Privacy-First & Local-Only
 
 - Your tasks belong to you. Pocket Planner stores all data locally on your computer via secure configuration files. There are no external servers, cloud databases, or accounts required.
 
 ---
 
-## 📸 Screenshots
+## <a id="screenshots"></a>📸 Screenshots
 
 | Feature                  | Preview                                                    |
 | ------------------------ | ---------------------------------------------------------- |
@@ -89,9 +89,9 @@ _Figure 1: The distraction-free weekly grid featuring task notes, progress track
 
 ---
 
-## 🚀 Download & Installation
+## <a id="download-and-installation"></a>🚀 Download & Installation
 
-### 🍏 macOS
+### <a id="macos"></a>🍏 macOS
 
 #### Method 1: Via Homebrew (Recommended)
 
@@ -120,7 +120,7 @@ brew install --cask pocket-planner
 
 ---
 
-### Windows
+### <a id="windows"></a>Windows
 
 1.  Download the latest `.exe` installer from the [Releases](https://github.com/pocket-planner/desktop-app-releases/releases) page.
 2.  Run the installer and follow the setup prompts.
@@ -138,7 +138,7 @@ brew install --cask pocket-planner
 
 ---
 
-## 🛠️ Data Locations
+## <a id="data-locations"></a>🛠️ Data Locations
 
 Your task plans and settings are saved locally at:
 
