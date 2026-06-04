@@ -6,8 +6,24 @@ Designed to keep you focused, Pocket Planner sits in your system tray and helps 
 
 ---
 
+## 🚀 Quick Install
+
+| Platform       | Command / Download                                                                                    |
+| :------------- | :---------------------------------------------------------------------------------------------------- |
+| **🍏 macOS**   | `brew tap pocket-planner/tap && brew install --cask pocket-planner`                                   |
+| **🏁 Windows** | **[Download .exe Installer](https://github.com/pocket-planner/desktop-app-releases/releases/latest)** |
+| **🐧 Linux**   | `sudo snap install pocket-planner`                                                                    |
+
+> [!WARNING]
+> **Code Signing Info:** Windows and macOS binaries are currently **unsigned**. To launch the app, you will need to bypass macOS Gatekeeper or Windows SmartScreen. See the [Download & Installation](#download-and-installation) section below for step-by-step instructions.
+
+_For manual installations or alternative packages (like Debian `.deb` or AppImage), see the full [Download & Installation](#download-and-installation) section below._
+
+---
+
 ## 📌 Table of Contents
 
+- [🚀 Quick Install](#quick-install)
 - [🎨 Visual Preview](#visual-preview)
 - [✨ Features](#features)
   - [Weekly Planning & Drag-and-Drop](#weekly-planning-and-drag-and-drop)
