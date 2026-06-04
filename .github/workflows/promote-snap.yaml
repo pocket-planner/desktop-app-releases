@@ -15,5 +15,6 @@ jobs:
       - name: Promote Snap to Stable
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
+          SNAPCRAFT_HAS_TTY: "true"
         run: |
-          snapcraft promote pocket-planner --from-channel edge --to-channel stable --yes
+          echo "y" | snapcraft promote pocket-planner --from-channel edge --to-channel stable
