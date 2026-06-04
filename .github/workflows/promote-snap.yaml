@@ -1,0 +1,19 @@
+name: Promote Snap to Stable
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  promote:
+    name: Promote Snap
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Snapcraft
+        run: sudo snap install snapcraft --classic
+
+      - name: Promote Snap to Stable
+        env:
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
+        run: |
+          snapcraft promote pocket-planner --from-channel edge --to-channel stable --yes
