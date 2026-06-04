@@ -40,6 +40,7 @@ _Figure 1: The distraction-free weekly grid featuring task notes, progress track
 
 - **Intuitive Grid:** View and manage your entire work week at a glance.
 - **Drag & Drop:** Easily reorder tasks within a day or drag them to reschedule for another day.
+- **Task Duplication:** Drag a task over the "+ Drop to Duplicate" copy zone in any day column to clone it (cloned tasks start as active/undone and retain notes).
 - **Incomplete Task Rollover:** Start every week fresh by carrying forward incomplete tasks from the previous week with a single click.
 
 ### <a id="power-workflows"></a>⚡ Power Workflows
@@ -78,14 +79,16 @@ _Figure 1: The distraction-free weekly grid featuring task notes, progress track
 
 ## <a id="screenshots"></a>📸 Screenshots
 
-| Feature                  | Preview                                                    |
-| ------------------------ | ---------------------------------------------------------- |
-| **Quick Add Overlay**    | ![Quick Add Overlay](docs/screenshots/quick_add.png)       |
-| **Global Search**        | ![Global Search](docs/screenshots/global_search.png)       |
-| **Recurring Tasks List** | ![Recurring Tasks](docs/screenshots/recurring_tasks.png)   |
-| **Recurrence Setup**     | ![Recurrence Setup](docs/screenshots/recurrunce_setup.png) |
-| **Settings & Themes**    | ![Settings Menu](docs/screenshots/settings_menu.png)       |
-| **System Tray Utility**  | ![System Tray Utility](docs/screenshots/tray_icon.png)     |
+| Feature                  | Preview                                                                      |
+| ------------------------ | ---------------------------------------------------------------------------- |
+| **Drag & Drop / Copy**   | ![Drag and Drop / Copy](docs/screenshots/drag_and_drop.png)                  |
+| **Duplicate Prevention** | ![Duplicate Prevention](docs/screenshots/drag_and_drop_allow_duplicates.png) |
+| **Quick Add Overlay**    | ![Quick Add Overlay](docs/screenshots/quick_add.png)                         |
+| **Global Search**        | ![Global Search](docs/screenshots/global_search.png)                         |
+| **Recurring Tasks List** | ![Recurring Tasks](docs/screenshots/recurring_tasks.png)                     |
+| **Recurrence Setup**     | ![Recurrence Setup](docs/screenshots/recurrunce_setup.png)                   |
+| **Settings & Themes**    | ![Settings Menu](docs/screenshots/settings_menu.png)                         |
+| **System Tray Utility**  | ![System Tray Utility](docs/screenshots/tray_icon.png)                       |
 
 ---
 
