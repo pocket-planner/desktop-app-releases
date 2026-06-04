@@ -20,6 +20,7 @@ Designed to keep you focused, Pocket Planner sits in your system tray and helps 
 - [🚀 Download & Installation](#download-and-installation)
   - [macOS](#macos)
   - [Windows](#windows)
+  - [Linux](#linux)
 - [🛠️ Data Locations](#data-locations)
 
 ---
@@ -130,7 +131,7 @@ brew install --cask pocket-planner
 
 > [!IMPORTANT]
 > **Windows SmartScreen & Unblock Workaround:**
-> Since this app is self-signed, Windows Defender SmartScreen may display a protection warning on launch. To proceed:
+> Since this app is self-signed/unsigned, Windows Defender SmartScreen may display a protection warning on launch. To proceed:
 >
 > 1. **Bypass SmartScreen:** On the "Windows protected your PC" dialog, click **More info**, then click **Run anyway**.
 > 2. **Manual File Unblock (if blocked from launching):**
@@ -141,9 +142,50 @@ brew install --cask pocket-planner
 
 ---
 
+### <a id="linux"></a>🐧 Linux
+
+#### Method 1: Via Snap Store (Recommended)
+
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/pocket-planner)
+
+```bash
+sudo snap install pocket-planner
+```
+
+_Note: Updates are managed automatically by the snapd background service._
+
+#### Method 2: Via AppImage
+
+1.  Download the latest `.AppImage` from the [Releases](https://github.com/pocket-planner/desktop-app-releases/releases) page.
+2.  Make it executable and run it:
+
+```bash
+chmod +x Pocket-Planner-*.AppImage
+./Pocket-Planner-*.AppImage
+```
+
+#### Method 3: Via Debian/Ubuntu (.deb)
+
+1.  Download the latest `.deb` package from the [Releases](https://github.com/pocket-planner/desktop-app-releases/releases) page.
+2.  Install it using your system package manager:
+
+```bash
+sudo dpkg -i pocket-planner-*.deb
+```
+
+> [!NOTE]
+> **Linux Integration Notes:**
+>
+> - **System Tray:** Linux tray icon integration depends on your Desktop Environment (DE). If you are running GNOME, you may need to install the **AppIndicator and KStatusNotifierItem Support** extension to view the system tray icon. KDE Plasma, XFCE, and MATE support the tray icon natively out of the box.
+> - **Autostart:** The "Start on System Startup" setting creates a standard `.desktop` entry under `~/.config/autostart/`. This works out of the box in most desktop environments, but custom window managers (e.g., i3, Sway) may require manual autostart handling in their configuration files.
+
+---
+
 ## <a id="data-locations"></a>🛠️ Data Locations
 
 Your task plans and settings are saved locally at:
 
 - **Windows:** `%APPDATA%\pocket-planner\config.json`
 - **macOS:** `~/Library/Application Support/pocket-planner/config.json`
+- **Linux (Snap):** `~/snap/pocket-planner/common/pocket-planner/config.json`
+- **Linux (non-Snap):** `~/.config/pocket-planner/config.json`
