@@ -1,0 +1,17 @@
+name: Publish to WinGet
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-winget:
+    name: Submit Update to WinGet
+    runs-on: windows-latest
+    steps:
+      - name: Publish to WinGet
+        uses: vedantmgoyal9/winget-releaser@v2
+        with:
+          identifier: PocketPlanner.PocketPlanner
+          installers-regex: 'Pocket.*Setup.*\.exe$'
+          token: ${{ secrets.WINGET_ACC_TOKEN }}
