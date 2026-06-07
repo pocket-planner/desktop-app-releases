@@ -1,0 +1,52 @@
+# This workflow publishes the AppX package to the Microsoft Store
+# when a new release tag is published in this repository.
+
+name: Publish to Microsoft Store
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-windows-store:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: pocket-planner/desktop-app # Checks out the source code repo
+          token: ${{ secrets.RELEASE_REPO_TOKEN }}
+          ref: master # Change to main if your default branch is main
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build and Package AppX
+        run: npm run build:appx
+
+      - name: Setup MSStore CLI
+        uses: microsoft/microsoft-store-apppublisher@v1.2
+
+      - name: Authenticate and Publish to Microsoft Store
+        shell: pwsh
+        run: |
+          # Configure Partner Center credentials
+          msstore reconfigure --tenantId "${{ secrets.PARTNER_CENTER_TENANT_ID }}" `
+            --sellerId "${{ secrets.PARTNER_CENTER_SELLER_ID }}" `
+            --clientId "${{ secrets.PARTNER_CENTER_CLIENT_ID }}" `
+            --clientSecret "${{ secrets.PARTNER_CENTER_CLIENT_SECRET }}"
+          
+          # Extract version dynamically from package.json
+          $version = (Get-Content package.json | ConvertFrom-Json).version
+          $packagePath = "./dist/Pocket Planner $version.appx"
+          
+          Write-Host "Publishing package: $packagePath"
+          
+          # Publish package (replace <YOUR_STORE_APP_ID> with the Product ID from your Partner Center dashboard)
+          msstore publish --appId "<YOUR_STORE_APP_ID>" --packagePath "$packagePath"
