@@ -6,6 +6,7 @@ name: Publish to Microsoft Store
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   publish-windows-store:
@@ -48,5 +49,5 @@ jobs:
           
           Write-Host "Publishing package: $packagePath"
           
-          # Publish package (replace <YOUR_STORE_APP_ID> with the Product ID from your Partner Center dashboard)
-          msstore publish --appId "<YOUR_STORE_APP_ID>" --packagePath "$packagePath"
+          # Publish package
+          msstore publish --appId "9PBV00L8VN20" --packagePath "$packagePath"
